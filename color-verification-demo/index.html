@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image AI Prediction</title>
+  </head>
+  <body>
+    <h1>Upload an Image for AI Prediction</h1>
+    <form id="upload-form">
+      <input type="file" id="image" name="image" accept="image/*" required />
+      <button type="submit">Upload</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+      const form = document.getElementById("upload-form");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const fileInput = document.getElementById("image");
+        const file = fileInput.files[0];
+        if (!file) {
+          alert("Please select a file.");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("file", file);
+
+        try {
+          const response = await fetch("http://127.0.0.1:5000/upload", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            document.getElementById(
+              "result"
+            ).innerText = `Accuracy: ${data.accuracy.toFixed(2)}%`;
+          } else {
+            const error = await response.json();
+            document.getElementById(
+              "result"
+            ).innerText = `Error: ${error.error}`;
+          }
+        } catch (error) {
+          document.getElementById(
+            "result"
+          ).innerText = `Error: ${error.message}`;
+        }
+      });
+    </script>
+  </body>
+</html>
