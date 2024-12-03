@@ -12,6 +12,12 @@ This project is capable of identifying the color of a wood veneer and determinin
 4. Run the `app.py` script:
 5. Open index.html
 
+## Artifact Demonstration
+
+[![Watch the video](https://img.youtube.com/vi/FBtAFtMBl1I/hqdefault.jpg)](https://youtu.be/FBtAFtMBl1I?feature=shared&t=85)
+
+Click the image above to watch the demonstration starting at the specified time.
+
 # Release Notes
 
 ## Version 0.0.0
