@@ -65,7 +65,6 @@ The color identification feature was chosen as the first implemented functionali
 - **GitHub**: Streamlined code collaboration and dataset management among team members.
 
 ### Weaknesses:
-- Flask’s scalability is limited; transitioning to a more robust framework may be necessary for production deployment.
 - Dataset preprocessing requires enhancements to handle inconsistencies in image formats and metadata.
 
 ---
