@@ -1,4 +1,4 @@
-# Color Verification & Validation Project
+# Color Verification & Validation Project Demo
 
 This project, "Color Verification & Validation," is designed to assist QA operators and field engineers in identifying wood veneer colors with high accuracy. It currently identifies **Medium Cherry** and **Graphite Walnut**, with plans to expand functionality for color validation in future releases.
 
